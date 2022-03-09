@@ -3,5 +3,6 @@
 
 {{-- this injects this code block into the @yield('content') of the layout that is being extended --}}
 @section('content')
-<h1>Home</h1>
+{{-- hero comes from the components folder hero.blade.php --}}
+@include('components.hero')
 @endsection
