@@ -1,0 +1,19 @@
+@use './base/reset';
+@use './base/utilities';
+@use './base/variables';
+@use './vendors/bootstrap/scss/bootstrap.scss';
+@use './layouts/main-layout.scss';
+@use './layouts/account-layout';
+@use './components/header.scss';
+@use './components/hero.scss';
+@use './pages/listings';
+@use './pages/show-status';
+@use './pages/auth';
+@use './pages/single-listing';
+
+
+.error-sub-text{
+  padding: 10px 0 0;
+  color: red;
+  font-size: .8rem;
+}

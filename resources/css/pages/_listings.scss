@@ -1,0 +1,133 @@
+.listings-page{
+  .listings-city{
+    position: relative;
+    background: #1b1b1b;
+    &__title{
+      font-weight: 700;
+      font-size: 4rem;
+      color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    img{
+      width:100%;
+      height: 300px;
+      object-fit: cover;
+      object-position: center;
+      opacity: .8;
+    }
+  }
+
+  .listings-filter{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    &__wrapper{
+      border-radius: 5px;
+      background: white;
+      display: flex;
+      padding: 15px;
+      position: relative;
+      transform: translate(0, -50%);
+    }
+    &__option, &__button{
+      padding: 0 15px;
+      height: 40px;
+      display: flex;
+      justify-content:center;
+      align-items: center;
+      border-radius: 5px;
+      border: 1px solid rgb(205, 209, 212);
+      margin-right: .5rem;
+      cursor: pointer;
+      transition: all .2s ease-in-out;
+      font-weight: 600;
+      &:hover{
+        background:rgb(245, 246, 247);
+      }
+    }
+    &__button{
+      margin-right: 0;
+      border: 1px solid rgb(219, 105, 29);
+      &:hover{
+        color: white;
+        background: rgb(219, 105, 29);
+      }
+    }
+    .fa-caret-down{
+      margin-left: 1rem;
+    }
+  }
+  .listings-properties{
+    img{
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 5px;
+    }
+    &__item{
+      display: block;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+      margin-bottom: 2rem;
+      position: relative;
+      text-decoration: none;
+      color:rgba(0, 0, 0, 0.8);
+      transition: all .3s ease-in-out;
+      &:hover{
+        color:rgb(219, 105, 29);
+      }
+    }
+    &__saved{
+      position: absolute;
+      right: 30px;
+      top: 30px;
+      width: 40px;
+      border-radius:50%;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #1b1b1b;
+      background: white;
+      transition: all .3s ease-in-out;
+      cursor: pointer;
+      &:hover, &--active{
+        background: #f56262;
+        color: white;
+      }
+    }
+    &__item-price{
+      font-size:2rem;
+      font-weight: 700;
+      display: block;
+      margin-bottom: .5rem;
+    }
+    &__item-details{
+      font-size:1.1rem;
+      color: #7c8791;
+      display: block;
+      margin-bottom: .5rem;
+    }
+    &__item-address{
+      font-size:.9rem;
+      margin-bottom: .5rem;
+      display: block;
+    }
+    &__item-line{
+      
+      background: #7c8791;
+      height: 1px;
+    }
+    &__item-owner{
+      font-size: .9rem;
+      color: #7c8791;
+      text-align: center;
+      display: block;
+    }
+  }
+}
