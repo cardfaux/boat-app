@@ -62,3 +62,26 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+# Steps
+
+## Initial Setup
+
+1. set up laravel then add breeze
+2. create initial routes for pages
+3. setup the styles
+4. setup the layouts
+
+## Prototype Frontend Pages
+
+1. Build The Header
+
+# Users View
+
+- Home
+- Show All Boats Page
+- Single Boats
+- Users Login Page
+- Users Register Page
+- Users Saved Boats
+- Users Showing Status

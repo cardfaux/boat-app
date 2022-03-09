@@ -6,19 +6,87 @@
   box-sizing: border-box;
 }
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -28,8 +96,17 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -37,16 +114,20 @@ body {
   line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: "";
   content: none;
 }
@@ -6729,106 +6810,6 @@ progress {
     display: none !important;
   }
 }
-body {
-  background: white;
-}
-
-.account-layout .listings-city {
-  position: relative;
-  background: #1b1b1b;
-}
-.account-layout .listings-city__title {
-  font-weight: 700;
-  font-size: 4rem;
-  color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.account-layout .listings-city img {
-  width: 100%;
-  height: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  opacity: 0.8;
-}
-.account-layout .content {
-  padding: 70px 0;
-}
-.account-layout .account__menu h2 {
-  font-weight: 700;
-}
-.account-layout .account__menu a {
-  display: block;
-  font-size: 1.1rem;
-  text-decoration: none;
-}
-.account-layout .listings-properties img {
-  width: 100%;
-  height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  border-radius: 5px;
-}
-.account-layout .listings-properties__item {
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-  margin-bottom: 2rem;
-  position: relative;
-}
-.account-layout .listings-properties__saved {
-  position: absolute;
-  right: 30px;
-  top: 30px;
-  width: 40px;
-  border-radius: 50%;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #1b1b1b;
-  background: white;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-}
-.account-layout .listings-properties__saved:hover, .account-layout .listings-properties__saved--active {
-  background: #f56262;
-  color: white;
-}
-.account-layout .listings-properties__item-price {
-  font-size: 2rem;
-  font-weight: 700;
-  display: block;
-  margin-bottom: 0.5rem;
-}
-.account-layout .listings-properties__item-details {
-  font-size: 1.1rem;
-  color: #7c8791;
-  display: block;
-  margin-bottom: 0.5rem;
-}
-.account-layout .listings-properties__item-address {
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
-  display: block;
-}
-.account-layout .listings-properties__item-line {
-  background: #7c8791;
-  height: 1px;
-}
-.account-layout .listings-properties__item-owner {
-  font-size: 0.9rem;
-  color: #7c8791;
-  text-align: center;
-  display: block;
-}
-
 .header {
   padding: 20px 0;
 }
@@ -6840,7 +6821,6 @@ body {
   font-size: 2.3rem;
   font-weight: 700;
   text-transform: uppercase;
-  text-decoration: none;
 }
 .header__menu {
   display: flex;
@@ -6871,471 +6851,4 @@ body {
   border: 1px solid #3366cc;
   margin-right: 1.5rem;
   color: #3366cc;
-  text-decoration: none;
-}
-.header__account-link--anchor {
-  margin-right: 1.5rem;
-  text-decoration: none;
-}
-
-.hero {
-  position: relative;
-  overflow: hidden;
-}
-.hero__images {
-  display: flex;
-  max-width: 100vw;
-  height: calc(100vh - 150px);
-  transition: all 0.9s ease-in-out;
-}
-.hero__images:hover {
-  transform: translate3d(-100%, 0, 0);
-}
-.hero__image {
-  overflow: hidden;
-  flex-shrink: 0;
-  width: 100%;
-  position: relative;
-}
-.hero__info {
-  position: absolute;
-  top: 30%;
-  left: 10%;
-  font-size: 4rem;
-  display: flex;
-  flex-direction: column;
-}
-.hero__subtitle {
-  font-size: 1rem;
-  color: white;
-}
-.hero__title {
-  font-size: 6rem;
-  width: 400px;
-  color: white;
-  font-weight: 700;
-  line-height: 1;
-  margin-bottom: 2rem;
-}
-.hero__info-link {
-  font-size: 1.2rem;
-  color: white;
-  font-weight: 700;
-  text-decoration: none;
-}
-.hero__image-img {
-  overflow: hidden;
-  flex-shrink: 0;
-  width: 100vw;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-}
-.hero__indicator {
-  position: absolute;
-  bottom: 0;
-  right: 50px;
-  background: white;
-  display: flex;
-  padding: 2rem;
-}
-.hero__indicator-item {
-  display: flex;
-}
-.hero__indicator-number {
-  font-size: 3rem;
-  font-weight: 900px;
-  padding-right: 2rem;
-}
-.hero__indicator-text {
-  display: flex;
-  width: 60px;
-  align-items: center;
-  font-weight: 700px;
-  margin-right: 2rem;
-}
-
-.listings-page .listings-city {
-  position: relative;
-  background: #1b1b1b;
-}
-.listings-page .listings-city__title {
-  font-weight: 700;
-  font-size: 4rem;
-  color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.listings-page .listings-city img {
-  width: 100%;
-  height: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  opacity: 0.8;
-}
-.listings-page .listings-filter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.listings-page .listings-filter__wrapper {
-  border-radius: 5px;
-  background: white;
-  display: flex;
-  padding: 15px;
-  position: relative;
-  transform: translate(0, -50%);
-}
-.listings-page .listings-filter__option, .listings-page .listings-filter__button {
-  padding: 0 15px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  border: 1px solid #cdd1d4;
-  margin-right: 0.5rem;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  font-weight: 600;
-}
-.listings-page .listings-filter__option:hover, .listings-page .listings-filter__button:hover {
-  background: #f5f6f7;
-}
-.listings-page .listings-filter__button {
-  margin-right: 0;
-  border: 1px solid #db691d;
-}
-.listings-page .listings-filter__button:hover {
-  color: white;
-  background: #db691d;
-}
-.listings-page .listings-filter .fa-caret-down {
-  margin-left: 1rem;
-}
-.listings-page .listings-properties img {
-  width: 100%;
-  height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  border-radius: 5px;
-}
-.listings-page .listings-properties__item {
-  display: block;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-  margin-bottom: 2rem;
-  position: relative;
-  text-decoration: none;
-  color: rgba(0, 0, 0, 0.8);
-  transition: all 0.3s ease-in-out;
-}
-.listings-page .listings-properties__item:hover {
-  color: #db691d;
-}
-.listings-page .listings-properties__saved {
-  position: absolute;
-  right: 30px;
-  top: 30px;
-  width: 40px;
-  border-radius: 50%;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #1b1b1b;
-  background: white;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-}
-.listings-page .listings-properties__saved:hover, .listings-page .listings-properties__saved--active {
-  background: #f56262;
-  color: white;
-}
-.listings-page .listings-properties__item-price {
-  font-size: 2rem;
-  font-weight: 700;
-  display: block;
-  margin-bottom: 0.5rem;
-}
-.listings-page .listings-properties__item-details {
-  font-size: 1.1rem;
-  color: #7c8791;
-  display: block;
-  margin-bottom: 0.5rem;
-}
-.listings-page .listings-properties__item-address {
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
-  display: block;
-}
-.listings-page .listings-properties__item-line {
-  background: #7c8791;
-  height: 1px;
-}
-.listings-page .listings-properties__item-owner {
-  font-size: 0.9rem;
-  color: #7c8791;
-  text-align: center;
-  display: block;
-}
-
-.account-layout .request-list h2 {
-  font-weight: 700;
-  margin-bottom: 2rem;
-}
-.account-layout .request-list__wrapper {
-  background: white;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-  margin-bottom: 2rem;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.account-layout .request-list__info {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.account-layout .request-list__details {
-  font-size: 1.4rem;
-  color: #7c8791;
-}
-.account-layout .request-list__info-title {
-  font-weight: 700;
-}
-.account-layout .request-list__info-status {
-  padding: 10px 15px;
-}
-.account-layout .request-list__info-status--success {
-  background: greenyellow;
-  font-weight: 700;
-}
-.account-layout .request-list__info-status--canceled {
-  background: orange;
-  font-weight: 700;
-}
-.account-layout .request-list__info-status--sold {
-  background: red;
-  color: white;
-  font-weight: 700;
-}
-
-.auth-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.auth-page__form {
-  margin-top: 200px;
-  padding: 20px;
-  width: 400px;
-  background: white;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-  border-radius: 15px;
-}
-.auth-page__title {
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-.auth-page__form-group {
-  margin-bottom: 1rem;
-  display: flex;
-  flex-direction: column;
-}
-.auth-page__form-label {
-  font-weight: 700;
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
-}
-.auth-page__form-input {
-  padding: 0 15px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  border: 1px solid #cdd1d4;
-  margin-right: 0.5rem;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  font-weight: 600;
-}
-.auth-page__form-input:hover {
-  background: #f5f6f7;
-}
-.auth-page__form-button {
-  padding: 0 15px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 0;
-  background: #db691d;
-  border: 1px solid #db691d;
-  color: white;
-}
-.auth-page__form-button:hover {
-  color: white;
-  background: #db691d;
-}
-
-.single-listing-page .listing-top {
-  position: relative;
-  height: 600px;
-}
-.single-listing-page .listing-top__img {
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  height: 600px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-}
-.single-listing-page .listing-top__form-wrapper {
-  position: absolute;
-  z-index: 2;
-  width: 100%;
-  height: 600px;
-  width: 100%;
-}
-.single-listing-page .listing-top__form-wrapper .container {
-  height: 600px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-.single-listing-page .listing-top__form {
-  width: 300px;
-  background: white;
-  border-radius: 15px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-  padding: 20px;
-}
-.single-listing-page .listing-top__form-label {
-  display: block;
-  font-size: 1rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-.single-listing-page .listing-top__form-group {
-  width: 100%;
-  margin-bottom: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-.single-listing-page .listing-top__form-group--horz {
-  display: flex;
-}
-.single-listing-page .listing-top__form-group--horz .listing-top__form-option {
-  width: 100%;
-}
-.single-listing-page .listing-top__form-option, .single-listing-page .listing-top__form-button {
-  width: 100%;
-  padding: 0 15px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-  border: 1px solid #cdd1d4;
-  margin-right: 0.5rem;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  font-weight: 600;
-}
-.single-listing-page .listing-top__form-option:nth-last-child(1), .single-listing-page .listing-top__form-button:nth-last-child(1) {
-  margin-right: 0;
-}
-.single-listing-page .listing-top__form-option:hover, .single-listing-page .listing-top__form-button:hover {
-  background: #f5f6f7;
-}
-.single-listing-page .listing-top__form-button {
-  margin-right: 0;
-  border: 1px solid #db691d;
-  color: white;
-  background: #db691d;
-}
-.single-listing-page .listing-top__form-button:hover {
-  color: white;
-  background: #db691d;
-}
-.single-listing-page .listing-info {
-  padding: 50px 0px;
-}
-.single-listing-page .listing-info h1 {
-  font-size: 1.9rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 2rem;
-}
-.single-listing-page .listing-info__details {
-  display: flex;
-  justify-content: space-between;
-  max-width: 300px;
-}
-.single-listing-page .listing-info__details-text {
-  font-size: 1.2rem;
-  color: #7C8791;
-}
-.single-listing-page .listing-info__agent-title {
-  font-size: 0.9rem;
-  display: block;
-  font-weight: 700;
-}
-.single-listing-page .listing-info__agent-name {
-  font-size: 1.9rem;
-  display: block;
-  text-transform: uppercase;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-.single-listing-page .listing-extras__details h2 {
-  font-size: 1.7rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
-}
-.single-listing-page .listing-extras__details h3 {
-  font-size: 1.6rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
-}
-.single-listing-page .listing-extras__details p {
-  line-height: 2;
-}
-.single-listing-page .listing-extras__details ul {
-  list-style: square;
-}
-.single-listing-page .listing-extras__details li {
-  margin-bottom: 1rem;
-}
-.single-listing-page .listing-extras__gallery h2 {
-  font-size: 1.7rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
-}
-.single-listing-page .listing-extras__gallery img {
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-.error-sub-text {
-  padding: 10px 0 0;
-  color: red;
-  font-size: 0.8rem;
 }

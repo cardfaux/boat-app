@@ -14,9 +14,36 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    return view('pages/home');
+});
+// Show All Listings
+// Route::get('/{property_type}/{listing_type}/', function () {
+//     return view('welcome');
+// });
+Route::get('/{boat_type}/{listing_type}/', function () {
     return view('welcome');
 });
-
+// Single listing 
+Route::get('/listing/{slug}/{id}', function () {
+    return view('welcome');
+});
+// User Login
+Route::get('/login', function () {
+    return view('welcome');
+});
+// User Register
+Route::get('/register', function () {
+    return view('welcome');
+});
+// User Saved Listings
+Route::get('/account/saved', function () {
+    return view('welcome');
+});
+// User Showing Status
+Route::get('/account/show-status', function () {
+    return view('welcome');
+});
+// Dashboard
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
