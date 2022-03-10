@@ -70,11 +70,39 @@
       border-radius: 5px;
     }
     &__item {
+      display: block;
       padding: 20px;
-      border-radius: 5px;
+      border-radius: 15px;
       box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
         rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
       margin-bottom: 2rem;
+      position: relative;
+      text-decoration: none;
+      color: rgba(0, 0, 0, 0.8);
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        color: rgb(219, 105, 29);
+      }
+    }
+    &__saved {
+      position: absolute;
+      right: 30px;
+      top: 30px;
+      width: 40px;
+      border-radius: 50%;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #1b1b1b;
+      background: white;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+      &:hover,
+      &--active {
+        background: #f56262;
+        color: white;
+      }
     }
     &__item-price {
       font-size: 2rem;

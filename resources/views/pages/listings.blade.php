@@ -29,7 +29,7 @@
   <div class="listings-properties">
     <div class="container">
       <div class="row">
-        <div class="col-sm-6 col-lg-4 col-xl-3">
+        @for ($i = 1; $i <= 12; $i++) <div class="col-sm-6 col-lg-4 col-xl-3">
           <div class="listings-properties__item">
             <img src="https://images.dwell.com/photos/6405098978284392448/6466705949096243200/large.jpg">
             <span class="listings-properties__item-price">$75</span>
@@ -44,93 +44,14 @@
               Marina Company
             </span>
           </div>
-        </div>
-        <div class="col-sm-6 col-lg-4 col-xl-3">
-          <div class="listings-properties__item">
-            <img src="https://images.dwell.com/photos/6405098978284392448/6466705949096243200/large.jpg">
-            <span class="listings-properties__item-price">$75</span>
-            <span class="listings-properties__item-details"><i class="fa-solid fa-bed"></i> 4 <i
-                class="fa-solid fa-bath"></i> 3 <i class="fa-solid fa-ruler-triangle"></i> 800hp</span>
-            <span class="listings-properties__item-address">
-              Flat Rock Marina<br>
-              Miami Beach, FL 23456
-            </span>
-            <div class="listings-properties__item-line"></div>
-            <span class="listings-properties__item-owner">
-              Marina Company
-            </span>
-          </div>
-        </div>
-        <div class="col-sm-6 col-lg-4 col-xl-3">
-          <div class="listings-properties__item">
-            <img src="https://images.dwell.com/photos/6405098978284392448/6466705949096243200/large.jpg">
-            <span class="listings-properties__item-price">$75</span>
-            <span class="listings-properties__item-details"><i class="fa-solid fa-bed"></i> 10 <i
-                class="fa-solid fa-bath"></i> 3 <i class="fa-solid fa-ruler-triangle"></i> 5000hp</span>
-            <span class="listings-properties__item-address">
-              Flat Rock Marina<br>
-              Miami Beach, FL 23456
-            </span>
-            <div class="listings-properties__item-line"></div>
-            <span class="listings-properties__item-owner">
-              Marina Company
-            </span>
-          </div>
-        </div>
-        <div class="col-sm-6 col-lg-4 col-xl-3">
-          <div class="listings-properties__item">
-            <img src="https://images.dwell.com/photos/6405098978284392448/6466705949096243200/large.jpg">
-            <span class="listings-properties__item-price">$200</span>
-            <span class="listings-properties__item-details"><i class="fa-solid fa-bed"></i> 12 <i
-                class="fa-solid fa-bath"></i> 3 <i class="fa-solid fa-ruler-triangle"></i> 2000hp</span>
-            <span class="listings-properties__item-address">
-              Flat Rock Marina<br>
-              Miami Beach, FL 23456
-            </span>
-            <div class="listings-properties__item-line"></div>
-            <span class="listings-properties__item-owner">
-              Marina Company
-            </span>
-          </div>
-        </div>
-        <div class="col-sm-6 col-lg-4 col-xl-3">
-          <div class="listings-properties__item">
-            <img src="https://images.dwell.com/photos/6405098978284392448/6466705949096243200/large.jpg">
-            <span class="listings-properties__item-price">$100</span>
-            <span class="listings-properties__item-details"><i class="fa-solid fa-bed"></i> 4 <i
-                class="fa-solid fa-bath"></i> 3 <i class="fa-solid fa-ruler-triangle"></i> 2000hp</span>
-            <span class="listings-properties__item-address">
-              Flat Rock Marina<br>
-              Miami Beach, FL 23456
-            </span>
-            <div class="listings-properties__item-line"></div>
-            <span class="listings-properties__item-owner">
-              Marina Company
-            </span>
-          </div>
-        </div>
-        <div class="col-sm-6 col-lg-4 col-xl-3">
-          <div class="listings-properties__item">
-            <img src="https://images.dwell.com/photos/6405098978284392448/6466705949096243200/large.jpg">
-            <span class="listings-properties__item-price">$500</span>
-            <span class="listings-properties__item-details"><i class="fa-solid fa-bed"></i> 2 <i
-                class="fa-solid fa-bath"></i> 3 <i class="fa-solid fa-ruler-triangle"></i> 1000hp</span>
-            <span class="listings-properties__item-address">
-              Flat Rock Marina<br>
-              Miami Beach, FL 23456
-            </span>
-            <div class="listings-properties__item-line"></div>
-            <span class="listings-properties__item-owner">
-              Marina Company
-            </span>
-          </div>
-        </div>
-
       </div>
+      @endfor
+
     </div>
-
-
-
   </div>
+
+
+
+</div>
 </div>
 @endsection
