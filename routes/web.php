@@ -20,8 +20,8 @@ Route::get('/', function () {
 // Route::get('/{property_type}/{listing_type}/', function () {
 //     return view('welcome');
 // });
-Route::get('/{boat_type}/{listing_type}/', function () {
-    return view('welcome');
+Route::get('/{boat_type}/{listing_type}/{marina}', function () {
+    return view('pages/listings');
 });
 // Single listing 
 Route::get('/listing/{slug}/{id}', function () {

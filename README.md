@@ -75,6 +75,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 ## Prototype Frontend Pages
 
 1. Build The Header
+2. Build The Hero Slider
+3. Set up the listings page
 
 # Users View
 
