@@ -26,26 +26,19 @@ Route::get('/listing/{slug}/{id}', function () {
 // });
 Route::get('/{boat_type}/{listing_type}/{marina}', function () {
     return view('pages/listings');
-});
-// User Login
-Route::get('/login', function () {
-    return view('pages/login');
-});
-// User Register
-Route::get('/register', function () {
-    return view('pages/register');
-});
+})->name('listings');
+
 // User Saved Listings
-Route::get('/account/saved', function () {
+Route::get('/account', function () {
     return view('pages/saved-listings');
-});
+})->name('account');
 // User Showing Status
 Route::get('/account/show-status', function () {
     return view('pages/show-status');
-});
+})->name('show-status');
 // Dashboard
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';

@@ -9,6 +9,7 @@
     font-size: 2.3rem;
     font-weight: 700;
     text-transform: uppercase;
+    text-decoration: none;
   }
   &__menu {
     display: flex;
@@ -40,5 +41,10 @@
     border: 1px solid #3366cc;
     margin-right: 1.5rem;
     color: #3366cc;
+    text-decoration: none;
+    &--anchor {
+      margin-right: 1.5rem;
+      text-decoration: none;
+    }
   }
 }

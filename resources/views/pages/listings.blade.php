@@ -30,22 +30,28 @@
     <div class="container">
       <div class="row">
         @for ($i = 1; $i <= 12; $i++) <div class="col-sm-6 col-lg-4 col-xl-3">
-          <div class="listings-properties__item">
+          <a href="/listing/2123-grand-ave-miami-fl-33456/1" class="listings-properties__item">
             <img src="https://images.dwell.com/photos/6405098978284392448/6466705949096243200/large.jpg">
-            <span class="listings-properties__item-price">$75</span>
-            <span class="listings-properties__item-details"><i class="fa-solid fa-bed"></i> 6 <i
-                class="fa-solid fa-bath"></i> 3 <i class="fa-solid fa-ruler-triangle"></i> 200hp</span>
+            <div class="listings-properties__saved ">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+
+            <span class="listings-properties__item-price">$250,000</span>
+            <span class="listings-properties__item-details"><i class="fa-solid fa-bed"></i> 4 <i
+                class="fa-solid fa-bath"></i> 3 <i class="fa-solid fa-ruler"></i> 2440 SQFT</span>
             <span class="listings-properties__item-address">
-              Flat Rock Marina<br>
+              2135 Grand St,<br>
               Miami Beach, FL 23456
             </span>
             <div class="listings-properties__item-line"></div>
             <span class="listings-properties__item-owner">
-              Marina Company
+              Bryant Realty
             </span>
-          </div>
+          </a>
       </div>
       @endfor
+
+
 
     </div>
   </div>
