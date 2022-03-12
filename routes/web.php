@@ -13,6 +13,27 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Admin Route Group
+Route::group([
+    'prefix' => 'admin',
+    'as' => 'admin.'
+], function() {
+    Route::get('/', function () {
+        return view('admin/dashboard');
+    })->name('dashboard');
+
+    // Route::group([
+    //     'prefix' => 'listings',
+    //     'as' => 'listings.'
+    // ], function(){
+    //     Route::get('/', [\App\Http\Controllers\Admin\ListingController::class, 'index'])->name('index');
+
+    //     Route::get('/create', [\App\Http\Controllers\Admin\ListingController::class, 'create'])->name('create');
+
+    //     Route::get('/{id}/edit', [\App\Http\Controllers\Admin\ListingController::class, 'edit'])->name('edit');
+    // });
+});
+
 Route::get('/', function () {
     return view('pages/home');
 });
@@ -24,7 +45,7 @@ Route::get('/listing/{slug}/{id}', function () {
 // Route::get('/{property_type}/{listing_type}/', function () {
 //     return view('welcome');
 // });
-Route::get('/{boat_type}/{listing_type}/{marina}', function () {
+Route::get('/{boat_type}/{listing_type}/{city}/{marina_name}', function () {
     return view('pages/listings');
 })->name('listings');
 
