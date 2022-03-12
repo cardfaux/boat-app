@@ -59,8 +59,8 @@
       }
     }
   </style>
-  {{--
-  <link rel="stylesheet" href="{{mix('/css/styles.css')}}"> --}}
+
+  <link rel="stylesheet" href="{{mix('/css/styles.css')}}">
   <script defer="defer" src="/dash/main.js"></script>
 </head>
 
@@ -73,7 +73,7 @@
   </script>
   <div>
     <!-- #Left Sidebar ==================== -->
-    <div class="sidebar">
+    <div class="sidebar" style="background: #0b0b13;">
       <div class="sidebar-inner">
         <!-- ### $Sidebar Header ### -->
         <div class="sidebar-logo">
@@ -84,7 +84,7 @@
                     <div class="logo"><img src="assets/static/images/logo.png" alt=""></div>
                   </div>
                   <div class="peer peer-greed">
-                    <h5 class="lh-1 mB-0 logo-text">Adminator</h5>
+                    <h5 class="lh-1 mB-0 logo-text" style="color: red;">Boats Launch</h5>
                   </div>
                 </div>
               </a></div>
@@ -259,6 +259,14 @@
       </div>
       <!-- ### $App Screen Content ### -->
       <main class="main-content bgc-grey-100">
+        @if(session()->has('success'))
+        <div class="alert alert-success" role="alert">{{session('success')}}</div>
+        @endif
+        @if(session()->has('error'))
+        <div class="alert alert-danger" role="alert">
+          {{session('error')}}
+        </div>
+        @endif
         @yield('content')
       </main><!-- ### $App Screen Footer ### -->
       <footer class="bdT ta-c p-30 lh-0 fsz-sm c-grey-600"><span>Copyright © 2021 Designed by <a

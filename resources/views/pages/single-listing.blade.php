@@ -42,17 +42,20 @@
     <div class="container">
       <div class="row">
         <div class="col-md-7">
-          <h1>23 Grand Ave<br>
-            Miami, FL 33456
+          <h1>Nice, fresh pontoon<br>
+            That seats 8
           </h1>
+          <h2>23 Grand AVE<br>
+            Miami, FL 33456
+          </h2>
           <div class="listing-info__details">
-            <span class="listing-info__details-text"><i class="fa-solid fa-bed"></i> 4</span>
-            <span class="listing-info__details-text"><i class="fa-solid fa-bath"></i> 3</span>
-            <span class="listing-info__details-text"><i class="fa-solid fa-ruler"></i> 2440 SQFT</span>
+            <span class="listing-info__details-text"><i class="fa-solid fa-sailboat"></i> Pontoon</span>
+            <span class="listing-info__details-text"><i class="fa-solid fa-ruler-horizontal"></i> 28'</span>
+            <span class="listing-info__details-text"><i class="fa-solid fa-chair"></i> Seats 8</span>
           </div>
         </div>
         <div class="col-md-5">
-          <span class="listing-info__agent-title">Agent</span>
+          <span class="listing-info__agent-title">Owner</span>
           <span class="listing-info__agent-name">John Smith</span>
           <p class="listing-info__agent-profile">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
             nostrum hic voluptates enim delectus iusto sequi veritatis commodi ipsa tempore quam dolorem ex, dolorum
