@@ -88,3 +88,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 - Users Register Page
 - Users Saved Boats
 - Users Showing Status
+
+# Generate a model for Listings
+
+- run php artisan make:model Listing -m -s, to generate a model for Listings, migration, and seeder
+- generate a controller for Listings, run php artisan make:controller Admin/ListingController -r, make the controller inside a Admin folder

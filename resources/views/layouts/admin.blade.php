@@ -104,10 +104,8 @@
                 class="icon-holder"><i class="c-orange-500 ti-layout-list-thumb"></i> </span><span
                 class="title">Property Listings</span> <span class="arrow"><i class="ti-angle-right"></i></span></a>
             <ul class="dropdown-menu">
-              {{-- <li><a class="sidebar-link" href="{{route('admin.listings.create')}}">Create New Listing</a></li>
-              <li><a class="sidebar-link" href="{{route('admin.listings.index')}}">Show All Listings</a></li> --}}
-              <li><a class="sidebar-link" href="#!">Create New Listing</a></li>
-              <li><a class="sidebar-link" href="#!">Show All Listings</a></li>
+              <li><a class="sidebar-link" href="{{route('admin.listings.create')}}">Create New Listing</a></li>
+              <li><a class="sidebar-link" href="{{route('admin.listings.index')}}">Show All Listings</a></li>
               <li><a class="sidebar-link" href="datatable.html">Listing Tour Requests</a></li>
             </ul>
           </li>

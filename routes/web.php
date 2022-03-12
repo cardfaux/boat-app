@@ -22,16 +22,16 @@ Route::group([
         return view('admin/dashboard');
     })->name('dashboard');
 
-    // Route::group([
-    //     'prefix' => 'listings',
-    //     'as' => 'listings.'
-    // ], function(){
-    //     Route::get('/', [\App\Http\Controllers\Admin\ListingController::class, 'index'])->name('index');
+    Route::group([
+        'prefix' => 'listings',
+        'as' => 'listings.'
+    ], function(){
+        Route::get('/', [\App\Http\Controllers\Admin\ListingController::class, 'index'])->name('index');
 
-    //     Route::get('/create', [\App\Http\Controllers\Admin\ListingController::class, 'create'])->name('create');
+        Route::get('/create', [\App\Http\Controllers\Admin\ListingController::class, 'create'])->name('create');
 
-    //     Route::get('/{id}/edit', [\App\Http\Controllers\Admin\ListingController::class, 'edit'])->name('edit');
-    // });
+        Route::get('/{id}/edit', [\App\Http\Controllers\Admin\ListingController::class, 'edit'])->name('edit');
+    });
 });
 
 Route::get('/', function () {
