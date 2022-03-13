@@ -136,3 +136,9 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 - php artisan make:policy ListingPolicy --model=Listing
 - creates a app\policies\ListingPolicy.php file
 - add the policy to the ListingController.php
+
+# Create a status column on the Listings Table
+
+- php artisan make:migration create_status_column_for_listings_tabel --table=listings
+- run the migration for adding the column php artisan migrate
+- and add the status to the ListingController
