@@ -93,3 +93,31 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 - run php artisan make:model Listing -m -s, to generate a model for Listings, migration, and seeder
 - generate a controller for Listings, run php artisan make:controller Admin/ListingController -r, make the controller inside a Admin folder
+
+# add a Roles table with modle and seed generated so each user can have a role_id
+
+- run php artisan make:model Role -m -s
+
+# Add a role_id column on the users table with this command
+
+- run php artisan make:migration create_role_id_column_on_users_table --table=users
+
+## set up the relationships in the models
+
+## set up the seeds for the roles
+
+# run just the roleseeder
+
+- php artisan db:seed --class=RoleSeeder
+
+# reset and rerun all migrations and then seed the tables
+
+- php artisan migrate:refresh --seed
+
+# make a UsersSeeder
+
+- php artisan make:seeder UsersSeeder
+
+# rerun reset and rerun all migrations and then seed the tables
+
+- php artisan migrate:refresh --seed
