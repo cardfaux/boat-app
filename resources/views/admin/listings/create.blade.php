@@ -105,9 +105,7 @@
               </div>
               @enderror
             </div>
-          </div>
-          <div class="row">
-            <div class="mb-3 col-md-6">
+            <div class="mb-3 col-md-4">
               <label class="form-label" for="length">Length</label>
               <input type="text" class="form-control" name="length" id="length" placeholder="ex: 28" autocomplete="off"
                 value="{{old('length')}}">
@@ -117,9 +115,7 @@
               </div>
               @enderror
             </div>
-          </div>
-          <div class="row">
-            <div class="mb-3 col-md-6">
+            <div class="mb-3 col-md-2">
               <label class="form-label" for="seats">Seats</label>
               <input type="text" class="form-control" name="seats" id="seats" placeholder="ex: 8" autocomplete="off"
                 value="{{old('seats')}}">
