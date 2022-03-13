@@ -125,3 +125,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 # add a user_id column to the listings table for the relationship
 
 - php artisan make:migration add_user_id_column_to_listings_table --table=listings
+
+# make a IsAdmin Middleware
+
+- php artisan make:middleware IsAdminMiddleware
+- write the middleware and add it to the kernel.php middlewares
