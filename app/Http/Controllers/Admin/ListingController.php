@@ -18,7 +18,7 @@ class ListingController extends Controller
      */
     public function index()
     {
-        $listings = Listing::paginate(2);
+        $listings = Listing::where('user_id', auth()->user()->id)->paginate(2);
         return view('admin/listings/index', [
             'listings' => $listings
         ]);
@@ -31,6 +31,7 @@ class ListingController extends Controller
      */
     public function create()
     {
+        $this->authorize('create', Listing::class);
         return view('admin/listings/create');
     }
 
@@ -42,6 +43,8 @@ class ListingController extends Controller
      */
     public function store(Request $request)
     {
+        $this->authorize('create', Listing::class);
+
         request()->validate([
             'title' => 'required',
             'address' => 'required',
@@ -97,6 +100,7 @@ class ListingController extends Controller
             'id' => $id
         ])->first();
         
+        $this->authorize('update', $listing);
         // pass $listing to the view
         return view('admin/listings/edit', ['listing' => $listing]);
     }
@@ -124,6 +128,8 @@ class ListingController extends Controller
             'slug' => $slug,
             'id' => $id
         ])->first();
+        
+        $this->authorize('update', $listing);
 
         $listing->title = $request->get('title');
         $listing->marina = $request->get('marina');
@@ -153,6 +159,7 @@ class ListingController extends Controller
     public function destroy($slug, $id)
     {
     $listing = Listing::find($id);
+    $this->authorize('delete', $listing);
     $listing->delete();
 
     return redirect("/admin/listings")->with('success', 'Listing Has Been Delete Successfully');

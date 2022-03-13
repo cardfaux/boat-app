@@ -130,3 +130,9 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 - php artisan make:middleware IsAdminMiddleware
 - write the middleware and add it to the kernel.php middlewares
+
+# Generate a ListingPolicy for the Listing model
+
+- php artisan make:policy ListingPolicy --model=Listing
+- creates a app\policies\ListingPolicy.php file
+- add the policy to the ListingController.php
