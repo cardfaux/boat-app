@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 // connect the Listing model to this Listing controller
 use App\Models\Listing;
 use App\Helper\Helper;
+use App\Models\User;
 
 class ListingController extends Controller
 {
@@ -52,6 +53,7 @@ class ListingController extends Controller
         ]);
 
         $listing = new Listing();
+        $listing->user_id = auth()->user()->id;
         $listing->title = $request->get('title');
         $listing->marina = $request->get('marina');
         $listing->slipnumber = $request->get('slipnumber');

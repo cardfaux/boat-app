@@ -121,3 +121,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 # rerun reset and rerun all migrations and then seed the tables
 
 - php artisan migrate:refresh --seed
+
+# add a user_id column to the listings table for the relationship
+
+- php artisan make:migration add_user_id_column_to_listings_table --table=listings
