@@ -139,9 +139,8 @@
                 <h3>Details</h3>
                 <label class="form-label" for="description">Description</label>
                 <textarea rows="4" class="form-control" name="description" id="description"
-                  placeholder="ex: talk about listing" autocomplete="off">
-                {{old('description', $listing->description)}}
-                </textarea>
+                  placeholder="ex: talk about listing"
+                  autocomplete="off">{{old('description', $listing->description)}}</textarea>
                 @error('description')
                 <div class="error-sub-text">
                   {{$message}}

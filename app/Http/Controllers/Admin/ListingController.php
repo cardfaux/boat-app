@@ -144,6 +144,7 @@ class ListingController extends Controller
         $listing->length = $request->get('length');
         $listing->seats = $request->get('seats');
         $listing->status = $request->get('status');
+        $listing->description = $request->get('description');
 
         $listing->slug = Helper::slugify("{$request->marina}-{$request->slipnumber}-{$request->address}-{$request->address2}-{$request->city}-{$request->state}-{$request->zipcode}");
 

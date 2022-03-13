@@ -35,7 +35,24 @@
               </td>
               <td>{{$listing->class}}</td>
               <td>{{$listing->seats}}</td>
-              <td>Active</td>
+              <td>
+                <a href="{{ route('admin.listings.edit', [
+                  'slug' => $listing->slug,
+                  'id' => $listing->id
+                ]) }}">
+                  @if ($listing->status == 'published')
+                  <div class="btn cur-p btn-success"
+                    style="width: 100px; text-transform: capitalize; font-size: .8rem;">
+                    {{ $listing->status }}
+                  </div>
+                  @else
+                  <div class="btn cur-p btn-warning"
+                    style="width: 100px; text-transform: capitalize; font-size: .8rem;">
+                    {{ $listing->status }}
+                  </div>
+                  @endif
+                </a>
+              </td>
             </tr>
             @endforeach
           </tbody>

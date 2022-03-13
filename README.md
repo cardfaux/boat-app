@@ -142,3 +142,11 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 - php artisan make:migration create_status_column_for_listings_tabel --table=listings
 - run the migration for adding the column php artisan migrate
 - and add the status to the ListingController
+
+# Make model for Photo and make migration and seed with
+
+- php artisan make:model Photo -m -s
+
+# Make a controller for the PhotoController
+
+- php artisan make:controller Admin/PhotoController --resource
