@@ -21,7 +21,7 @@
             @enderror
           </div>
           <div class="mb-3">
-            <label class="form-label" for="Marina">Marina</label>
+            <label class="form-label" for="Marina">Marina Name</label>
             <input type="text" class="form-control" name="marina" id="Marina" placeholder="ex: Flat Rock" style=""
               autocomplete="off" value="{{old('marina')}}">
             @error('marina')
@@ -31,7 +31,7 @@
             @enderror
           </div>
           <div class="mb-3">
-            <label class="form-label" for="SlipNumber">SlipNumber</label>
+            <label class="form-label" for="SlipNumber">Slip Number</label>
             <input type="text" class="form-control" name="slipnumber" id="SlipNumber" placeholder="ex: 33" style=""
               autocomplete="off" value="{{old('slipnumber')}}">
             @error('slipnumber')
@@ -53,7 +53,7 @@
           <div class="mb-3">
             <label class="form-label" for="address2">Address 2</label>
             <input type="text" class="form-control" name="address2" id="address2"
-              placeholder="ex: Apartment, studio, or floor" style="" autocomplete="off" value="{{old('address2')}}">
+              placeholder="ex: Building #, Unit #, etc." style="" autocomplete="off" value="{{old('address2')}}">
             @error('address2')
             <div class="error-sub-text">
               {{$message}}
@@ -74,6 +74,7 @@
             <div class="mb-3 col-md-4">
               <label class="form-label" for="state">State</label>
               <select name="state" id="state" class="form-control">
+                <option value="NY" @selected(old('state')=='AL' )>Alabama</option>
                 <option value="FL" @selected(old('state')=='FL' )>Florida</option>
                 <option value="NY" @selected(old('state')=='NY' )>New York</option>
               </select>
