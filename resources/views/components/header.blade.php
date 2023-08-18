@@ -1,10 +1,10 @@
 <header class="header">
   <div class="container">
     <a href="/" class="header__logo">
-      Smith Realty
+      Smith Marina
     </a>
     <div class="header__menu">
-      <a href="/home/for_sale/south-beach" class="header__menu-link 
+      <a href="/home/for_sale/south-beach" class="header__menu-link
         @if(request()->routeIs('listings'))
           header__menu-link--active
         @endif">Listings</a>
