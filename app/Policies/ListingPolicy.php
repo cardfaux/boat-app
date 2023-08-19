@@ -20,6 +20,7 @@ class ListingPolicy
     {
         // allows the Admin to view any model
         return $user->role_id = 1;
+        // return $user->role_id == Role::IS_ADMIN;
     }
 
     /**

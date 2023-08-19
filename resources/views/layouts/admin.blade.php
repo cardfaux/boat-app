@@ -106,7 +106,8 @@
             <ul class="dropdown-menu">
               <li><a class="sidebar-link" href="{{route('admin.listings.create')}}">Create New Listing</a></li>
               <li><a class="sidebar-link" href="{{route('admin.listings.index')}}">Show All Listings</a></li>
-              <li><a class="sidebar-link" href="datatable.html">Listing Tour Requests</a></li>
+              <li><a class="sidebar-link" href="{{route('admin.listings.my_index')}}">Show My Listings</a></li>
+              <li><a class="sidebar-link" href="#!">Listing Tour Requests</a></li>
             </ul>
           </li>
           {{--

@@ -18,10 +18,39 @@ class ListingController extends Controller
      */
     public function index()
     {
-        $listings = Listing::where('user_id', auth()->user()->id)->paginate(2);
-        return view('admin/listings/index', [
-            'listings' => $listings
-        ]);
+      //! below was getting only the listings for the logged in user
+      // $listings = Listing::where('user_id', auth()->user()->id)->paginate(2);
+      // return view('admin/listings/index', [
+      //     'listings' => $listings
+      // ]);
+      //! below is also loading the user data for each listing
+      // $listings = Listing::with('user')->orderBy('created_at', 'desc')->paginate(2);
+      // return view('admin/listings/index', [
+      //   'listings' => $listings
+      // ]);
+      $listings = Listing::orderBy('created_at', 'desc')->paginate(2);
+      return view('admin/listings/index', [
+        'listings' => $listings
+      ]);
+    }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function my_index()
+    {
+      //! below was getting only the listings for the logged in user
+      $listings = Listing::where('user_id', auth()->user()->id)->paginate(2);
+      return view('admin/listings/index', [
+          'listings' => $listings
+      ]);
+      //! below is also loading the user data for each listing
+      // $listings = Listing::with('user')->orderBy('created_at', 'desc')->paginate(2);
+      // return view('admin/listings/index', [
+      //   'listings' => $listings
+      // ]);
     }
 
     /**
@@ -73,7 +102,7 @@ class ListingController extends Controller
         $listing->slug = Helper::slugify("{$request->marina}-{$request->slipnumber}-{$request->address}-{$request->address2}-{$request->city}-{$request->state}-{$request->zipcode}");
 
         $listing->save();
-        
+
         return redirect("/admin/listings/{$listing->slug}/{$listing->id}/edit")->with('success', 'Created New Listing Successfully');
     }
 
@@ -100,7 +129,7 @@ class ListingController extends Controller
             'slug' => $slug,
             'id' => $id
         ])->first();
-        
+
         $this->authorize('update', $listing);
         // pass $listing to the view
         return view('admin/listings/edit', ['listing' => $listing]);
@@ -129,7 +158,7 @@ class ListingController extends Controller
             'slug' => $slug,
             'id' => $id
         ])->first();
-        
+
         $this->authorize('update', $listing);
 
         $listing->title = $request->get('title');
@@ -149,7 +178,7 @@ class ListingController extends Controller
         $listing->slug = Helper::slugify("{$request->marina}-{$request->slipnumber}-{$request->address}-{$request->address2}-{$request->city}-{$request->state}-{$request->zipcode}");
 
         $listing->save();
-        
+
         return redirect("/admin/listings/{$listing->slug}/{$listing->id}/edit")->with('success', 'Listing Updated Successfully');
     }
 

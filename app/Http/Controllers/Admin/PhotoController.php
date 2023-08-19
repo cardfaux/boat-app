@@ -21,7 +21,8 @@ class PhotoController extends Controller
         $photos = Photo::where(['user_id' => auth()->user()->id, 'listing_id' => $id])->paginate(2);
 
         if($photos->total() < 1) {
-            return redirect("/admin/listings/${slug}/${id}/photos/create");
+            // return redirect("/admin/listings/${slug}/${id}/photos/create");
+            return redirect("/admin/listings/{$slug}/{$id}/photos/create");
         }
 
         return view('admin/listings/photos/index', [
@@ -60,7 +61,7 @@ class PhotoController extends Controller
         $name = $newName;
 
         $request->file('image')->move(public_path('img'), $name);
-        
+
         $photo = new Photo();
         $photo->name = $name;
         $photo->size = $size;
@@ -69,7 +70,7 @@ class PhotoController extends Controller
         $photo->featured = 0;
 
         $photo->save();
-        
+
         // $listing->slug = Helper::slugify("{$request->address}-{$request->address2}-{$request->city}-{$request->state}-{$request->zipcode}");
 
         return redirect("/admin/listings/{$slug}/{$id}/photos")->with('success', 'Photo Added Successfully');
@@ -86,7 +87,7 @@ class PhotoController extends Controller
     //     $photo = Photo::find($photo_id);
 
     //     // $this->authorize('delete', $photo);
-        
+
     //     $photo->delete();
 
     //     return redirect("/admin/listings/{$slug}/{$id}/photos")->with('success', 'Photo Has Been Deleted Successfully');
@@ -122,7 +123,7 @@ class PhotoController extends Controller
         $new_photo->featured = 1;
 
         // $this->authorize('delete', $photo);
-        
+
         $new_photo->save();
 
         return redirect("/admin/listings/{$slug}/{$id}/photos")->with('success', 'Featured Photo Has Been Updated Successfully');

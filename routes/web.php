@@ -29,6 +29,8 @@ Route::group([
     ], function(){
         Route::get('/', [\App\Http\Controllers\Admin\ListingController::class, 'index'])->name('index');
 
+        Route::get('/my-listings', [\App\Http\Controllers\Admin\ListingController::class, 'my_index'])->name('my_index');
+
         Route::get('/create', [\App\Http\Controllers\Admin\ListingController::class, 'create'])->name('create');
 
         Route::post('/', [\App\Http\Controllers\Admin\ListingController::class, 'store'])->name('store');
@@ -42,11 +44,11 @@ Route::group([
          // Starting Listing Photos
 
         Route::get('/{slug}/{id}/photos', [\App\Http\Controllers\Admin\PhotoController::class, 'index'])->name('photos');
-        
+
         Route::get('/{slug}/{id}/photos/create', [\App\Http\Controllers\Admin\PhotoController::class, 'create'])->name('photos.create');
 
         Route::post('/{slug}/{id}/photos', [\App\Http\Controllers\Admin\PhotoController::class, 'store'])->name('photos.store');
-        
+
         Route::get('/{slug}/{id}/photos/{photo_id}/delete', [\App\Http\Controllers\Admin\PhotoController::class, 'destroy'])->name('photos.delete');
 
         Route::get('/{slug}/{id}/photos/{photo_id}/featured', [\App\Http\Controllers\Admin\PhotoController::class, 'featured'])->name('photos.featured');
@@ -56,7 +58,7 @@ Route::group([
 Route::get('/', function () {
     return view('pages/home');
 });
-// Single listing 
+// Single listing
 Route::get('/listing/{slug}/{id}', function () {
     return view('pages/single-listing');
 });

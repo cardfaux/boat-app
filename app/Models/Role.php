@@ -13,4 +13,10 @@ class Role extends Model
     {
         return $this->hasMany(User::class);
     }
+
+    public const IS_ADMIN = 1;
+    public const IS_AGENT = 2;
+    public const IS_USER = 3;
+    public const IS_HOST = 4;
+
 }
