@@ -4,7 +4,7 @@
       Smith Marina
     </a>
     <div class="header__menu">
-      <a href="/home/for_sale/south-beach" class="header__menu-link
+      <a href="/listing/amandas-marina-51-2064-lost-creek-rd--carbon-hill-ny-35549/5" class="header__menu-link
         @if(request()->routeIs('listings'))
           header__menu-link--active
         @endif">Listings</a>
