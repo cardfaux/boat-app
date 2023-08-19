@@ -4,11 +4,14 @@
       Smith Marina
     </a>
     <div class="header__menu">
-      <a href="/listing/amandas-marina-51-2064-lost-creek-rd--carbon-hill-ny-35549/5" class="header__menu-link
+      <a href="/pontoon/for_rent/carbon-hill/rock" class="header__menu-link
         @if(request()->routeIs('listings'))
           header__menu-link--active
         @endif">Listings</a>
-      <a href="#" class="header__menu-link">Property</a>
+      <a href="/listing/amandas-marina-51-2064-lost-creek-rd--carbon-hill-ny-35549/5" class="header__menu-link
+        @if(request()->routeIs('frontlisting.show'))
+          header__menu-link--active
+        @endif">Property</a>
       <a href="#" class="header__menu-link">Pages</a>
     </div>
     <div class="header__account">
