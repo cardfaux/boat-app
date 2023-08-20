@@ -18,6 +18,7 @@
               <th scope="col">Class</th>
               <th scope="col">Seats</th>
               <th scope="col">Status</th>
+              <th scope="col">Published</th>
             </tr>
           </thead>
           <tbody>
@@ -40,18 +41,28 @@
                   'slug' => $listing->slug,
                   'id' => $listing->id
                 ]) }}">
-                  @if ($listing->status == 'published')
+                  @if ($listing->status == 'available')
                   <div class="btn cur-p btn-success"
                     style="width: 100px; text-transform: capitalize; font-size: .8rem;">
                     {{ $listing->status }}
                   </div>
                   @else
-                  <div class="btn cur-p btn-warning"
-                    style="width: 100px; text-transform: capitalize; font-size: .8rem;">
+                  <div class="btn cur-p btn-danger" style="width: 100px; text-transform: capitalize; font-size: .8rem;">
                     {{ $listing->status }}
                   </div>
                   @endif
                 </a>
+              </td>
+              <td>
+                @if ($listing->published == 1)
+                <div class="btn cur-p btn-success" style="width: 100px; text-transform: capitalize; font-size: .8rem;">
+                  published
+                </div>
+                @else
+                <div class="btn cur-p btn-warning" style="width: 100px; text-transform: capitalize; font-size: .8rem;">
+                  draft
+                </div>
+                @endif
               </td>
             </tr>
             @endforeach

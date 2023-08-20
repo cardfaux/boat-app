@@ -92,8 +92,8 @@
     }
     &__details {
       display: flex;
-      justify-content: space-between;
-      max-width: 300px;
+      justify-content: start;
+      gap: 2rem;
     }
     &__details-text {
       font-size: 1.2rem;

@@ -47,11 +47,17 @@
     <div class="container">
       <div class="row">
         <div class="col-md-7">
-          <h1>{{ $listing->address }} {{ $listing->address2 }}<br>
-            {{ $listing->city }}, {{ $listing->state }} {{ $listing->zipcode }}
+          <h1>{{ $listing->title }}<br>
+            That seats {{ $listing->seats }} people
           </h1>
+          <h2>{{ $listing->address }} {{ $listing->address2 }}<br>
+            {{ $listing->city }}, {{ $listing->state }} {{ $listing->zipcode }}
+          </h2>
           <div class="listing-info__details">
-            <span class="listing-info__details-text"><i class="fa-solid fa-sailboat"></i> {{ $listing->class }}</span>
+            <span class="listing-info__details-text"><i class="fa-solid fa-sailboat"></i> {{ $listing->boat_type
+              }}</span>
+            <span class="listing-info__details-text"><i class="fa-solid fa-tint"></i> Class: {{ $listing->class
+              }}</span>
             <span class="listing-info__details-text"><i class="fa-solid fa-ruler-horizontal"></i> {{ $listing->length
               }}'</span>
             <span class="listing-info__details-text"><i class="fa-solid fa-chair"></i> Seats {{ $listing->seats

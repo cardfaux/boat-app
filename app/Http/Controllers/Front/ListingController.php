@@ -15,17 +15,19 @@ class ListingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request, $boat_class = null, $listing_type = "for_rent", $state = null, $city = null, $zipcode = null)
+    public function index(Request $request, $boat_class = null, $boat_type = null, $listing_type = "for_rent", $state = null, $city = null, $zipcode = null)
     {
       $min_seats = (is_null ($request->input('min_seats'))) ? 0 : $request->input('min_seats');
       $max_seats = (is_null ($request->input('max_seats'))) ? 100 : $request->input('max_seats');
       $min_length = (is_null ($request->input('min_length'))) ? 0 : $request->input('min_length');
       $max_length = (is_null ($request->input('max_length'))) ? 100 : $request->input('max_length');
-      // $min_price = (is_null ($request->input('min_price'))) ? 0 : $request->input('min_price');
-      // $max_price = (is_null ($request->input('min_price'))) ? 1000000 : $request->input('min_price');
+      $min_price = (is_null ($request->input('min_price'))) ? 0 : $request->input('min_price');
+      $max_price = (is_null ($request->input('max_price'))) ? 1000000 : $request->input('max_price');
+
       $filters = [
         'class' => $boat_class,
-        // 'listing_type' => $listing_type,
+        'boat_type' => $boat_type,
+        'listing_type' => $listing_type,
         'state' => $state,
         'city' => $city,
         'zipcode' => $zipcode
@@ -38,10 +40,12 @@ class ListingController extends Controller
           }
         }
       })
-      ->where('status', 'published')
+      ->where('published', 1)
+      ->where('status', 'available')
       ->whereBetween('seats', [$min_seats, $max_seats])
       ->whereBetween('length', [$min_length, $max_length])
-      ->whereBetween('price', [$request->input('min_price'), $request->input('max_price')])
+      // ->whereBetween('price', [$request->input('min_price'), $request->input('max_price')])
+      ->whereBetween('price', [$min_price, $max_price])
       ->get();
 
       return $listings;

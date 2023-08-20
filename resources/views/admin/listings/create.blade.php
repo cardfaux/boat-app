@@ -51,8 +51,8 @@
             @enderror
           </div>
           <div class="mb-3">
-            <label class="form-label" for="address2">Address 2</label>
-            <input type="text" class="form-control" name="address2" id="address2"
+            <label class="form-label" for="Address2">Address 2</label>
+            <input type="text" class="form-control" name="address2" id="Address2"
               placeholder="ex: Building #, Unit #, etc." style="" autocomplete="off" value="{{old('address2')}}">
             @error('address2')
             <div class="error-sub-text">
@@ -62,8 +62,8 @@
           </div>
           <div class="row">
             <div class="mb-3 col-md-6">
-              <label class="form-label" for="city">City</label>
-              <input type="text" class="form-control" name="city" id="city" placeholder="ex: New York" style=""
+              <label class="form-label" for="City">City</label>
+              <input type="text" class="form-control" name="city" id="City" placeholder="ex: New York" style=""
                 autocomplete="off" value="{{old('city')}}">
               @error('city')
               <div class="error-sub-text">
@@ -72,9 +72,9 @@
               @enderror
             </div>
             <div class="mb-3 col-md-4">
-              <label class="form-label" for="state">State</label>
-              <select name="state" id="state" class="form-control">
-                <option value="NY" @selected(old('state')=='AL' )>Alabama</option>
+              <label class="form-label" for="State">State</label>
+              <select name="state" id="State" class="form-control">
+                <option value="AL" @selected(old('state')=='AL' )>Alabama</option>
                 <option value="FL" @selected(old('state')=='FL' )>Florida</option>
                 <option value="NY" @selected(old('state')=='NY' )>New York</option>
               </select>
@@ -85,8 +85,8 @@
               @enderror
             </div>
             <div class="mb-3 col-md-2">
-              <label class="form-label" for="zipcode">Zip</label>
-              <input type="text" class="form-control" name="zipcode" id="zipcode" placeholder="ex: 15476"
+              <label class="form-label" for="ZipCode">Zip</label>
+              <input type="text" class="form-control" name="zipcode" id="ZipCode" placeholder="ex: 15476"
                 autocomplete="off" value="{{old('zipcode')}}">
               @error('zipcode')
               <div class="error-sub-text">
@@ -97,8 +97,8 @@
           </div>
           <div class="row">
             <div class="mb-3 col-md-6">
-              <label class="form-label" for="class">Class</label>
-              <input type="text" class="form-control" name="class" id="class" placeholder="ex: Pontoon"
+              <label class="form-label" for="Class">Class</label>
+              <input type="text" class="form-control" name="class" id="Class" placeholder="ex: A, I, II, etc"
                 autocomplete="off" value="{{old('class')}}">
               @error('class')
               <div class="error-sub-text">
@@ -107,8 +107,18 @@
               @enderror
             </div>
             <div class="mb-3 col-md-4">
-              <label class="form-label" for="length">Length</label>
-              <input type="text" class="form-control" name="length" id="length" placeholder="ex: 28" autocomplete="off"
+              <label class="form-label" for="BoatType">Type</label>
+              <input type="text" class="form-control" name="boat_type" id="BoatType" placeholder="ex: Pontoon"
+                autocomplete="off" value="{{old('boat_type')}}">
+              @error('boat_type')
+              <div class="error-sub-text">
+                {{$message}}
+              </div>
+              @enderror
+            </div>
+            <div class="mb-3 col-md-2">
+              <label class="form-label" for="Length">Length</label>
+              <input type="text" class="form-control" name="length" id="Length" placeholder="ex: 28" autocomplete="off"
                 value="{{old('length')}}">
               @error('length')
               <div class="error-sub-text">
@@ -116,11 +126,35 @@
               </div>
               @enderror
             </div>
-            <div class="mb-3 col-md-2">
-              <label class="form-label" for="seats">Seats</label>
-              <input type="text" class="form-control" name="seats" id="seats" placeholder="ex: 8" autocomplete="off"
+          </div>
+          <div class="row">
+            <div class="mb-3 col-md-6">
+              <label class="form-label" for="Seats">Seats</label>
+              <input type="text" class="form-control" name="seats" id="Seats" placeholder="ex: 8" autocomplete="off"
                 value="{{old('seats')}}">
               @error('seats')
+              <div class="error-sub-text">
+                {{$message}}
+              </div>
+              @enderror
+            </div>
+            <div class="mb-3 col-md-4">
+              <label class="form-label" for="ListingType">Listing Type</label>
+              <select name="listing_type" id="ListingType" class="form-control">
+                <option value="for_rent" @selected(old('listing_type')=='for_rent' )>For Rent</option>
+                <option value="for_sale" @selected(old('listing_type')=='for_sale' )>For Sale</option>
+              </select>
+              @error('listing_type')
+              <div class="error-sub-text">
+                {{$message}}
+              </div>
+              @enderror
+            </div>
+            <div class="mb-3 col-md-2">
+              <label class="form-label" for="Price">Price</label>
+              <input type="number" min="0.00" max="10000.00" step="0.01" class="form-control" name="price" id="Price"
+                placeholder="ex: 99.99" autocomplete="off" value="{{old('price')}}">
+              @error('price')
               <div class="error-sub-text">
                 {{$message}}
               </div>

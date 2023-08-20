@@ -65,7 +65,7 @@ Route::get('/listing/{slug}/{id}', [\App\Http\Controllers\Front\ListingControlle
 // Route::get('/{property_type}/{listing_type}/', function () {
 //     return view('welcome');
 // });
-Route::get('/{boat_class}/{listing_type?}/{state?}/{city?}/{zipcode?}', [\App\Http\Controllers\Front\ListingController::class, 'index'])->name('frontlisting.index');
+Route::get('/boatrentals/{boat_class?}/{boat_type?}/{listing_type?}/{state?}/{city?}/{zipcode?}', [\App\Http\Controllers\Front\ListingController::class, 'index'])->name('frontlisting.index');
 
 // User Saved Listings
 Route::get('/account', function () {

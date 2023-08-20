@@ -81,23 +81,31 @@ class ListingController extends Controller
             'zipcode' => 'required|integer',
             'class' => 'required',
             'length' => 'required|integer',
-            'seats' => 'required|integer'
+            'seats' => 'required|integer',
+            'price' => 'required|decimal:2,4',
+            'boat_type' => 'required',
+            'listing_type' => 'required',
         ]);
 
         $listing = new Listing();
         $listing->user_id = auth()->user()->id;
         $listing->title = $request->get('title');
         $listing->marina = $request->get('marina');
+        $listing->listing_type = $request->get('listing_type');
         $listing->slipnumber = $request->get('slipnumber');
         $listing->address = $request->get('address');
         $listing->address2 = $request->get('address2');
         $listing->city = $request->get('city');
+        // $listing->city = Helper::slugify("{$request->city}");
         $listing->state = $request->get('state');
         $listing->zipcode = $request->get('zipcode');
         $listing->class = $request->get('class');
+        $listing->boat_type = $request->get('boat_type');
         $listing->length = $request->get('length');
         $listing->seats = $request->get('seats');
-        $listing->status = 'draft';
+        $listing->price = $request->get('price');
+        $listing->status = 'available';
+        $listing->published = 0;
 
         $listing->slug = Helper::slugify("{$request->marina}-{$request->slipnumber}-{$request->address}-{$request->address2}-{$request->city}-{$request->state}-{$request->zipcode}");
 
@@ -151,7 +159,10 @@ class ListingController extends Controller
             'zipcode' => 'required|integer',
             'class' => 'required',
             'length' => 'required|integer',
-            'seats' => 'required|integer'
+            'seats' => 'required|integer',
+            'price' => 'required|decimal:2,4',
+            'boat_type' => 'required',
+            'listing_type' => 'required',
         ]);
 
         $listing = Listing::where([
@@ -163,6 +174,7 @@ class ListingController extends Controller
 
         $listing->title = $request->get('title');
         $listing->marina = $request->get('marina');
+        $listing->listing_type = $request->get('listing_type');
         $listing->slipnumber = $request->get('slipnumber');
         $listing->address = $request->get('address');
         $listing->address2 = $request->get('address2');
@@ -170,10 +182,13 @@ class ListingController extends Controller
         $listing->state = $request->get('state');
         $listing->zipcode = $request->get('zipcode');
         $listing->class = $request->get('class');
+        $listing->boat_type = $request->get('boat_type');
         $listing->length = $request->get('length');
         $listing->seats = $request->get('seats');
         $listing->status = $request->get('status');
+        $listing->published = $request->get('published');
         $listing->description = $request->get('description');
+        $listing->price = $request->get('price');
 
         $listing->slug = Helper::slugify("{$request->marina}-{$request->slipnumber}-{$request->address}-{$request->address2}-{$request->city}-{$request->state}-{$request->zipcode}");
 

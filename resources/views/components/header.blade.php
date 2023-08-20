@@ -4,11 +4,12 @@
       Smith Marina
     </a>
     <div class="header__menu">
-      <a href="/pontoon/for_rent/carbon-hill/rock" class="header__menu-link
+      <a href="/boatrentals/iii/sail%20boat/for_rent/al/carbon%20hill/35549?min_seats=1&max_seats=7&min_price=200&max_price=1000"
+        class="header__menu-link
         @if(request()->routeIs('listings'))
           header__menu-link--active
         @endif">Listings</a>
-      <a href="/listing/amandas-marina-51-2064-lost-creek-rd--carbon-hill-ny-35549/5" class="header__menu-link
+      <a href="/listing/brakefield-marina-78-2064-lost-creek-rd--carbon-hill-al-35549/8" class="header__menu-link
         @if(request()->routeIs('frontlisting.show'))
           header__menu-link--active
         @endif">Property</a>
