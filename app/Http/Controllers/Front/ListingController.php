@@ -33,6 +33,8 @@ class ListingController extends Controller
         'zipcode' => $zipcode
       ];
 
+      $photos = Photo::all();
+
       $listings = DB::table('listings')->where(function($query) use($filters) {
         foreach ($filters as $column => $value) {
           if(!is_null($value)) {
@@ -48,6 +50,10 @@ class ListingController extends Controller
       ->whereBetween('price', [$min_price, $max_price])
       ->get();
 
+      return view('pages/listings', [
+          'listings' => $listings,
+          'photos' => $photos,
+      ]);
       return $listings;
     }
 

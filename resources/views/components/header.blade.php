@@ -4,16 +4,16 @@
       Smith Marina
     </a>
     <div class="header__menu">
-      <a href="/boatrentals/iii/sail%20boat/for_rent/al/carbon%20hill/35549?min_seats=1&max_seats=7&min_price=200&max_price=1000"
-        class="header__menu-link
-        @if(request()->routeIs('listings'))
+      <a href="/boatrentals" class="header__menu-link
+        @if(request()->routeIs('frontlisting.index'))
           header__menu-link--active
         @endif">Listings</a>
       <a href="/listing/brakefield-marina-78-2064-lost-creek-rd--carbon-hill-al-35549/8" class="header__menu-link
         @if(request()->routeIs('frontlisting.show'))
           header__menu-link--active
         @endif">Property</a>
-      <a href="#" class="header__menu-link">Pages</a>
+      <a href="/boatrentals/iii/sail%20boat/for_rent/al/carbon%20hill/35549?min_seats=1&max_seats=7&min_price=200&max_price=1000"
+        class="header__menu-link">Filter</a>
     </div>
     <div class="header__account">
 

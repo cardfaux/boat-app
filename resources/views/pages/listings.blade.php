@@ -29,35 +29,42 @@
   <div class="listings-properties">
     <div class="container">
       <div class="row">
-        @for ($i = 1; $i <= 12; $i++) <div class="col-sm-6 col-lg-4 col-xl-3">
-          <a href="/listing/2123-grand-ave-miami-fl-33456/1" class="listings-properties__item">
-            <img src="https://images.dwell.com/photos/6405098978284392448/6466705949096243200/large.jpg">
+        @foreach ($listings as $listing)
+        <div class="col-sm-6 col-lg-4 col-xl-3">
+          <a href="/listing/{{ $listing->slug }}/{{ $listing->id }}" class="listings-properties__item">
+            {{-- <img src="https://images.dwell.com/photos/6405098978284392448/6466705949096243200/large.jpg"> --}}
+            @foreach ($photos as $photo)
+            @if ($photo->featured)
+            @if ($photo->listing_id == $listing->id)
+            <img class="listing-top__img" src="/img/{{ $photo->name }}" alt="listing featured photo">
+            @endif
+            @endif
+            @endforeach
             <div class="listings-properties__saved ">
               <i class="fa-solid fa-heart"></i>
             </div>
 
-            <span class="listings-properties__item-price">$250,000</span>
-            <span class="listings-properties__item-details"><i class="fa-solid fa-bed"></i> 4 <i
-                class="fa-solid fa-bath"></i> 3 <i class="fa-solid fa-ruler"></i> 2440 SQFT</span>
+            <span class="listings-properties__item-price">${{ $listing->price }} / hr.</span>
+            <span class="listings-properties__item-details">
+              <i class="fa-solid fa-sailboat"></i> {{ $listing->boat_type }}
+              <i class="fa-solid fa-chair"></i> {{ $listing->seats }}
+              <i class="fa-solid fa-ruler-horizontal"></i> {{ $listing->length }}'</span>
             <span class="listings-properties__item-address">
-              2135 Grand St,<br>
-              Miami Beach, FL 23456
+              {{ $listing->address }} {{ $listing->address2 }},<br>
+              {{ $listing->city }}, {{ $listing->state }} {{ $listing->zipcode }}
             </span>
             <div class="listings-properties__item-line"></div>
             <span class="listings-properties__item-owner">
-              Bryant Realty
+              {{ $listing->marina }}
             </span>
           </a>
+        </div>
+        @endforeach
       </div>
-      @endfor
-
-
-
     </div>
+
+
+
   </div>
-
-
-
-</div>
 </div>
 @endsection
